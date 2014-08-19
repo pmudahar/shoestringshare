@@ -31,6 +31,65 @@ body {
     text-decoration: none;
     color: $linkColor;
   }
+
+  button {
+    background: $linkColor;
+    color: white;
+    border-radius: 5px;
+    border: 0;
+    display: inline-block;
+    padding: 10px;
+  }
+}
+
+.softstyle {
+  border: 1px solid $midColor;
+  border-radius: 5px;
+  width: 100%;
+  display: block;
+  margin: 10px 0px;
+  padding: 5px;
+}
+
+.form-group {
+  text-align: left;
+  label {
+    width: 100%;
+    display: block;
+  }
+  input {
+    @extend .softstyle;
+  }
+  textarea {
+    @extend .softstyle;
+  }
+}
+
+.clearfix {
+  @include clearfix();
+}
+
+.page-header {
+  text-align: left;
+  font-weight: normal;
+  small {
+    color: $midColor;
+  }
+}
+
+.list-unstyled {
+  list-style: none;
+}
+
+.breadcrumb {
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  background: $lightColor;
+  li {
+    display: inline;
+    margin-right: 20px;
+  }
 }
 
 .section {

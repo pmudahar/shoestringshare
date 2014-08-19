@@ -32,6 +32,16 @@
   width: 30%;
 }
 
+.col-sm-8 {
+  @extend .col;
+  width: 62%;
+}
+
+.col-sm-4 {
+  @extend .col;
+  width: 30%;
+}
+
 img {
   max-width: 100%;
   max-height: 100%;
