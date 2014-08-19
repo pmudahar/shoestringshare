@@ -1,7 +1,75 @@
 @import "normalize";
 @import "modern-business";
+@import "variables";
+@import "clearfix";
+@import "grid";
+
 body {
+  font-family: $sans;
+  font-size: 14px;
+
+  hr {
+    color: white;
+    border: none;
+    height: 1px;
+    border-top: 1px solid white;
+  }
+
   h1 {
     color: white;
+  }
+
+  h2 {
+    font-size: 2em;
+    font-weight: normal;
+  }
+
+  h3 {
+    font-size: 1.25em;
+    font-weight: normal;
+  }
+
+  a {
+    text-decoration: none;
+    color: $linkColor;
+  }
+
+  padding-top: 0;
+}
+
+.section {
+  padding: 20px 0;
+}
+
+.section-colored {
+  padding: 20px 0;
+}
+
+.nav {
+  list-style: none;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.navbar-fixed-top {
+  position: fixed;
+  margin-top: 0px;
+}
+
+.navbar-brand {
+  float: left;
+}
+
+.navbar-right {
+  float: right;
+}
+
+.navbar-inverse {
+  background: $darkColor;
+  color: $lightColor;
+  a {
+    color: $lightColor;
   }
 }
