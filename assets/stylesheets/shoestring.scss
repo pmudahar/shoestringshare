@@ -1,161 +1,101 @@
 @import "normalize";
 @import "modern-business";
-@import "variables";
-@import "clearfix";
-@import "grid";
-
 body {
-  font-family: $sans;
-  font-size: 14px;
-  position: relative;
-  padding-top: 50px;
-
-  hr {
-    border: none;
-    height: 1px;
-    border-top: 1px solid $lightColor;
-    padding-bottom: 10px;
-  }
-
-  h2 {
-    font-size: 2em;
-    font-weight: normal;
-  }
-
-  h3 {
-    font-size: 1.25em;
-    font-weight: normal;
-  }
-
-  a {
-    text-decoration: none;
-    color: $linkColor;
-  }
-
-  button {
-    background: $linkColor;
-    color: white;
-    border-radius: 5px;
-    border: 0;
-    display: inline-block;
-    padding: 10px;
-  }
-}
-
-.softstyle {
-  border: 1px solid $midColor;
-  border-radius: 5px;
-  width: 100%;
-  display: block;
-  margin: 10px 0px;
-  padding: 5px;
-}
-
-.form-group {
-  text-align: left;
-  label {
-    width: 100%;
-    display: block;
-  }
-  input {
-    @extend .softstyle;
-  }
-  textarea {
-    @extend .softstyle;
-  }
-}
-
-.clearfix {
-  @include clearfix();
-}
-
-.page-header {
-  text-align: left;
-  font-weight: normal;
-  small {
-    color: $midColor;
-  }
-}
-
-.list-unstyled {
-  list-style: none;
-}
-
-.breadcrumb {
-  width: 100%;
-  padding: 15px;
-  text-align: left;
-  background: $lightColor;
-  li {
-    display: inline;
-    margin-right: 20px;
-  }
-}
-
-.section {
-  padding: 20px 0;
-}
-
-.section-colored {
   h1 {
-    color: white;
-  }
-  padding: 20px 0;
-  hr {
-    color: white;
-    border-top: 1px solid white;
   }
 }
+
+$nav-height: 51px;
+$nav-font-size: 16px;
+
+@mixin clearfix() {
+  &:after {
+    content: " ";
+    display: table;
+    clear:both;
+  }
+}
+
 
 .navbar {
-  margin: 0 auto;
-  width: 100%;
-  //padding: 0 1.5% 0 1.5% !important;
-  height: 50px;
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-  div {
-    display: inline-block;
-    float: right;
-  }
-  .container {
-    max-width: 1050px;
-    display: block;
-    margin: 0 auto;
-    margin-top: 16px;
-    float: none;
+  height: $nav-height;
+  background: #eee;
+  
+  a {
+    color: #ccc;
+    font-size: $nav-font-size;
+    line-height: $nav-height;
+    text-decoration: none;
   }
 }
 
-.nav {
-  list-style: none;
-}
-
-.navbar-nav {
-  //
+.navbar-inverse {
+  background: #333;
 }
 
 .navbar-fixed-top {
   position: fixed;
   top: 0;
-  margin-top: 0px;
+  left: 0;
+  width: 100%;
 }
 
 .navbar-header {
-  float: left !important;
+//  padding-top: $nav-height/2 - $nav-font-size/2;
+  float: left;
+  padding-left: 10px;
 }
 
-.navbar-right {
-  float: right;
-  text-align: right;
-}
-
-.navbar-inverse {
-  background: $darkColor;
-  color: $lightColor;
-  a {
-    color: $lightColor;
+ul.nav {
+  margin-top: 0;
+  
+  li {
+    display:block;
+    float: left;
+    height: $nav-height;
+    text-align: center;
+    padding: 0 10px;
+    &:hover {
+      background-color: blue;
+    }
   }
+
 }
+
+.img-responsive {
+  width: 100%;
+}
+
+ul.navbar-right {
+  float: right;
+  margin-right: 10px;
+}
+
+.section:first-of-type {
+  img {
+    width: 100%;
+  }
+  padding: 0;
+}
+
+.row {
+  @include clearfix();
+}
+
+// $grid-cols: 12;
+
+// @for $i from 1 through $grid-cols {
+//     .col-lg-#{$i} {
+//       float: left;
+//       box-sizing: border-box;
+//       width: percentage($i/$grid-cols);
+//       padding: 0 1.5%;
+//     }
+//   }
+
+/* rest of shoestring.scss file */
+ 
+@import "media-queries";
+
+
+
